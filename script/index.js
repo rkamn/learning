@@ -1,4 +1,3 @@
-alert("#####")
 
 
 function greet(){
@@ -15,8 +14,9 @@ function combine(str1, str2, str3){
 
 greet();
 printName("Rakesh");
-const task3Element = document.getElementById("myBtn").addEventListener('click', greet);
-alert(task3Element);
 
-const combineString = combine('Hello ', 'Mr. ' + 'India ');
+const task3Element = document.getElementById("myBtn").addEventListener('click', greet);
+alert(task3Element);// not working check this
+
+const combineString = combine('Hello ', 'Mr. ' + 'India ');// extra undefined cumming check this
 alert(combineString);
