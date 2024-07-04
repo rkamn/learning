@@ -13,7 +13,7 @@ const RESULT_COMPUTER_WIN= 'COMPUTER_WINS'
 let gameIsRunning = false;
 
 const getPlayerChoise = function(){    // anonymous function
-    const selection = prompt(`${ROCK}, ${PAPER} OR ${SCISSORS}?`, '').toUpperCase();
+    const selection = prompt(`Please enter ${ROCK}, ${PAPER} or ${SCISSORS}?`, '').toUpperCase();
     if(selection !== ROCK && selection !== PAPER && selection !== SCISSORS){
         const a = alert(`Invalid choice! We chose ${DEFSULT_USER_CHOICE} for you`);
         //console.log(a);
@@ -70,10 +70,12 @@ startGameBtn.addEventListener('click',function(){
     if(winner === RESULT_DRAW){
         message = message +' had a drow';
     }else if(winner === RESULT_PLAYER_WIN){
-        message = message + " player won";
+        message = message + ", you won";
     }else{
-        message = message + ' computer won';
+        message = message + ',you lost';
     }
+    alert(message);
+    gameIsRunning = false;
 
 });
 
