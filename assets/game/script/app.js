@@ -19,8 +19,7 @@ const getPlayerChoise = function(){    // anonymous function
     const selection = prompt(`${ROCK}, ${PAPER} OR ${SCISSORS}?`, '').toUpperCase();
 >>>>>>> e5c3a52 (rebase testing)
     if(selection !== ROCK && selection !== PAPER && selection !== SCISSORS){
-        const a = alert(`Invalid choice! We chose ${DEFSULT_USER_CHOICE} for you`);
-        //console.log(a);
+       alert(`Invalid choice! We chose ${DEFSULT_USER_CHOICE} for you`);
         return DEFSULT_USER_CHOICE;
     }
     return selection;
@@ -64,7 +63,7 @@ startGameBtn.addEventListener('click',function(){
     }
     gameIsRunning = true;
     console.log("Game is Starting... ");
-    const playerChoice = getPlayerChoise();
+    const playerChoice = getPlayerChoise();  // might be undefined
     const comuterChoice = getComputerChoice();
     const winner = getWinner(comuterChoice, playerChoice);
     console.log('Player choice : '+playerChoice);
