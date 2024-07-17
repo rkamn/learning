@@ -2,21 +2,38 @@
 <html>
 <head>
 <title>DOM</title>
+<style>
+    .red-bg{
+        background-color: red;
+        color: white;
+    }
+    .visible{
+        display: block;
+    }
+    .invisible{
+        display: none;
+    }
+
+</style>
 </head>
 <body>
 <header>
     <h1 id = 'main-tittle'>Dive into the DOM!</h1>
 </header>
-
+<section class="red-bg">
 <ul>
     <li> Item 1</li>
     <li class="list-item">Item 2</li>
     <li class="list-item">Item 3</li>
 </ul>
+</section class="red-bg visible">
 
+
+<button >Toggle visibility</button>
 
 <p id="welcome-text" class="text-default">Welcome!!</p>
 
+<input type="text" value="input sothing here">
 
 
 <script type="text/javascript" src="./app.js"></script>
