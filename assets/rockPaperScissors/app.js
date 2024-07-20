@@ -11,10 +11,6 @@ let compScore = 0;
 
 
 const drawGame = () =>{
-    userScore++;
-    compScore++;
-    user_score.innerText = userScore;
-    comp_score.innerText = compScore;
     msg.innerText = 'Game draw, Play Again..';
     msg.style.backgroundColor = 'blue';
     console.log(`Game draw.. , User Score ${userScore} & Computer Score ${compScore}`);
