@@ -9,6 +9,10 @@ const toCurr = document.querySelector('.to select');
 const msg = document.querySelector('.msg');
 const perUnitMsg = document.querySelector('.perUnitMsg');
 
+document.addEventListener('load',(evt)=>{
+    updateExchangeRate(evt);
+})
+
 
 
 for(let select of dropdowns){
@@ -39,8 +43,13 @@ const updateFlag = (element) =>{
      console.log('new flag image updated selected');
 }
 
-btnForm.addEventListener('click', async(evt)=>{
+btnForm.addEventListener('click', (evt)=>{
     evt.preventDefault();
+    updateExchangeRate(evt);
+
+});
+
+const updateExchangeRate = async (evt) =>{
     let amount = document.querySelector('.amount input');
     // default value for invalid input
     let amtVal = amount.value;
@@ -60,5 +69,4 @@ btnForm.addEventListener('click', async(evt)=>{
     let finalAmount = amtVal * rate;
     msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 
-
-});
+} 
